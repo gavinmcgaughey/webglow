@@ -2,22 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-cream text-ink font-sans;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .text-glow {
+    text-shadow: 0 0 24px rgba(59, 130, 246, 0.45), 0 0 48px rgba(59, 130, 246, 0.2);
+  }
+
+  .logo-glow {
+    text-shadow: 0 0 12px rgba(59, 130, 246, 0.5), 0 0 28px rgba(59, 130, 246, 0.25);
+  }
+
+  .section-padding {
+    @apply px-5 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+
+  .card-base {
+    @apply rounded-2xl border border-warm-200/80 bg-white shadow-card transition-all duration-300;
+  }
+
+  .card-base:hover {
+    @apply border-primary/20 shadow-card-hover;
+  }
 }
 
 @layer utilities {
