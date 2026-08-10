@@ -6,7 +6,7 @@ export const NAV_LINKS = [
   { href: "#faq", label: "FAQ" },
 ] as const;
 
-export const BOOKING_URL = "#cta";
+export const BOOKING_URL = "https://calendly.com/gmcgaughey54/30min";
 
 export const PACKAGES = [
   {
