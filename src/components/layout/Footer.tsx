@@ -45,15 +45,15 @@ export function Footer() {
             >
               hello@webglow.studio
             </a>
-            <p className="mt-3 text-sm text-warm-500">
-              webglow.studio
-            </p>
+            <p className="mt-3 text-sm text-warm-500">webglow.studio</p>
           </div>
 
           <div>
             <p className="text-sm font-semibold text-ink mb-3">Ready to start?</p>
             <a
-              href="#cta"
+              href="https://calendly.com/gmcgaughey54/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex text-sm font-medium text-primary hover:text-primary-600 transition-colors"
             >
               Book a free strategy call →
