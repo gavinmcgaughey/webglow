@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { FadeIn, Stagger, StaggerItem } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -56,16 +57,30 @@ export function Work() {
           />
         </FadeIn>
 
-        {/* Featured case study */}
+        {/* Featured case study - Real screenshots */}
         <FadeIn className="mt-12 lg:mt-14">
           <article className="card-base overflow-hidden group">
             <div className="grid lg:grid-cols-2 gap-0">
-              <div className="p-2 sm:p-3 lg:p-4">
-                <ProjectMock
-                  accent={featured.accent}
-                  label={featured.mockLabel}
-                  featured
-                />
+              <div className="p-2 sm:p-3 lg:p-4 space-y-3">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-warm-200/80 shadow-soft">
+                  <Image
+                    src="/remaxinco.png"
+                    alt="RE/MAX Incompass website homepage"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+                <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-warm-200/80 shadow-soft hidden sm:block">
+                  <Image
+                    src="/remaxinco2.png"
+                    alt="RE/MAX Incompass website detail"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
               </div>
               <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10 lg:pl-4">
                 <span className="text-xs font-semibold uppercase tracking-wide text-primary mb-2">
@@ -84,6 +99,14 @@ export function Work() {
                   <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
                   {featured.result}
                 </p>
+                <a
+                  href="https://incompass.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center text-sm font-medium text-primary hover:underline"
+                >
+                  View live site →
+                </a>
               </div>
             </div>
           </article>
